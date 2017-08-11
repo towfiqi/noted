@@ -1,0 +1,99 @@
+Notes (App.js)
+-----------
+PHASE ONE
+==================
+
+1. Add Notes: 
+
+A submit form. Should contain : Title, Content, Author, date, Cateogory field. Upon submit, it should be
+added to App State and to localStorage. The structure should be:
+
+note-1: {
+    title: "A New Note",
+    slug: "a-new-note",
+    content: "Lorem Ipsum dolor sit Amet, nlbo si fower formaling.",
+    category: "WordPress, Learn",
+    publish_date: "1029384971",
+    last_modified: "1029384971",
+    Author: uid,
+    fav: false,
+    public: false
+}
+
+Database Structure:
+-------------------
+    noted-uid{
+        notes: {
+            note-1: {title:"bl bl", slug:"", content: ......}
+        },
+        categories: {
+            cat-1: {title:"Category 1", slug:""}
+        },
+        settings:{
+            email: "useremail@gmai.com", Name: "Towfiq I"
+        },
+        owner: uid
+    }
+
+
+
+2. Display Notes: 
+
+The Notes should be displayed on Homepage Upon Login. It will check if there are any notes by current user. If not, it will them
+there isn't. If there is, show them the note titles and a little summary under the text and the category and dates. It will also
+have a star icon to make it favorite. Upon clicking the Notes, they will be take to their single note view.
+
+The Notes should be sorted by categories, date and faves.
+
+The Fav notes will be automatically stickied to top.
+
+3. Edit Notes:
+
+Notes can be edited from there single view. The edit form should have all the fields that the Add Note form has. But it will also
+include a mecahnism of adding "last_modified" to current time.
+
+
+4. Delete Notes:
+
+Delteing Notes can be done from the App view and also from the Single View.
+
+
+5. Single Note View:
+
+The Single note view, will display all the information of that note and also an edit button and delete button. users should
+also be able to assing categories to the notes from here.
+
+
+
+PHASE TWO
+===============
+
+All these below features should be implented in a single category view and route: /categories
+
+1. Add Cateogories:
+
+A Cateogory add form with title and id only. Structure:
+
+cat-1: {
+    title: "WordPress"
+}
+
+
+2. Cateogory Edit/Delete:
+
+Category Eidt/Delte Button should be side by side.
+
+
+3. Category Note Count:
+
+Display the number of notes that are under this category.
+
+
+PHASE THREE
+==================
+
+
+
+3. Settings Page:
+
+Name, Email, Country & Logout
